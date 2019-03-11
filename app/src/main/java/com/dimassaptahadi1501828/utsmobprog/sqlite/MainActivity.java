@@ -23,13 +23,13 @@ public class MainActivity extends AppCompatActivity {
         //insert data,
         dbKasir = new DbPembayaran(getApplicationContext());
         dbKasir.open();
-        dbKasir.insertPembayaran("1","1000");
+        dbKasir.insertPembayaran("Dimas","Sukajadi");
 
 
         //coba cari pembayaran
-        DbPembayaran.Pembayaran m = dbKasir.getPembayaran("1");
+        DbPembayaran.Pembayaran m = dbKasir.getPembayaran("Dimas");
         Toast.makeText(getApplicationContext(),
-        String.format ("Kode_Bayar: %s ; Jumlah_Bayar: %s",m.kode,m.jumlah), Toast.LENGTH_LONG).show();
+        String.format ("Nama: %s ; Alamat: %s",m.kode,m.jumlah), Toast.LENGTH_LONG).show();
     }
 
 
